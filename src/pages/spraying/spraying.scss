@@ -1,0 +1,62 @@
+page-spraying {
+    .form-control{
+        padding: 0.5px 0.75rem;
+        font-size: 17px;
+    }
+    .inline{
+        display: inline; 
+    }
+    .paddingTop{
+        margin-top: 0.5em; 
+    }
+    .delete{
+        background-color: #a83f3f !important; 
+    }
+    .labelTitle{
+        color: #488BC8;
+        font-size: 18px;
+        padding-top: 2em;
+        font-weight: 500; 
+    }
+    .event-detail-container{
+        display: none; 
+    }
+    option{
+        text-transform: lowercase;
+    }
+    .table-bordered > thead > tr > th, .table-bordered > tbody> tr > th, .table-bordered  > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+        border: none !important; 
+    }
+    .table-bordered{
+        border: none !important; 
+    }
+    .monthview-selected{
+        background: url(../assets/ic_my_selector.png) center;
+        background-repeat: no-repeat;
+        background-color: white !important; 
+        background-size: 3em;
+    }
+    .table> thead> tr> th, .table> tbody> tr> th, .table> tfoot> tr> th, .table> thead> tr> td, .table> tbody > tr> td, .table > tfoot> tr> td{
+        padding: 8px !important;
+        line-height: 24px !important;
+    }
+    .monthview-primary-with-event{
+        background-color: white !important;
+        background: url(../assets/leaf.png) center;
+        background-repeat: no-repeat;
+        background-size: 2em 2.5em; 
+    }
+    .monthview-current{
+        background: url(../assets/sun.png) center;
+        background-color: white !important;
+        background-repeat: no-repeat;
+        background-size: 3em; 
+        color: white; 
+    }
+    .title{
+        color: #488BC8; 
+        text-align: center;
+        font-size: 22px;
+        font-weight: 500;
+    }
+}

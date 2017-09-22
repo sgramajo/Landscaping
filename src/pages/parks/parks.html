@@ -1,0 +1,12 @@
+<ion-content padding>
+    <ion-list>
+        <ion-item (click)="editModal(park.$key, park.park)" *ngFor="let park of parks">
+            {{ park.park }}
+        </ion-item>
+    </ion-list>
+    <ion-fab style="bottom:15px; right: 35px;">
+        <button (click)="addModal()" ion-fab color="secondary" fab fab-fixed>
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-fab>
+</ion-content>

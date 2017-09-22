@@ -1,0 +1,28 @@
+<ion-content>
+    <div class="row dropdown form-group">
+        <div class="container">
+            <label class="labelTitle col-3 col-form-label">Park: </label>
+            <select class="form-control col-8 inline" [(ngModel)]="selectedValue" name="selectedValue" (change)="getParks(this.selectedValue);">
+                <option *ngFor="let park of parks" [ngValue]="park.park">{{park.park}}</option>
+            </select>
+        </div>
+    </div>
+    <div padding>
+        <div class="title">{{viewTitle}}</div>
+        <calendar [eventSource]="eventSource"
+        [calendarMode]="calendar.mode"
+        [currentDate]="calendar.currentDate"
+        (onTitleChanged)="onViewTitleChanged($event)"
+        (onCurrentDateChanged)="onCurrentDateChanged($event)"
+        step="30">
+      </calendar>
+    </div>
+    <ion-fab style="bottom:15px; right: 35px;">
+        <button ion-fab class="btn btn-default ion-fab btn-block" (click)=showConfirm() fab fab-fixed color="secondary">
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-fab>
+    <!--*ngIf="confirmResult != null">
+      <b [ngClass]="{'text-danger': !confirmResult, 'text-success': confirmResult}">{{confirmResult ? 'Accepted': 'Declined'}}</b>
+    -->
+</ion-content>

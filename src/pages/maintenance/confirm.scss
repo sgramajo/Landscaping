@@ -1,0 +1,40 @@
+confirm{
+    .imgTitle{
+        text-align: center; 
+        
+    }
+    img{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    #mow, #trimming, #plantsRemove, #edger, #weedeater{
+        padding: 10px;
+        margin: 5px;
+        border: 1px solid #488BC8;
+        border-radius: 5px;
+        cursor: pointer; 
+    }
+    .blue{
+        background-color: #488BC8;
+    }
+    .white{
+        color: white;
+        float: left; 
+    }
+    .btn-default{
+        background-color: white; 
+        border: 1px solid #488BC8; 
+        color: #488BC8; 
+        padding-top: 1em; 
+        padding-bottom: 1em; 
+        border-radius: 4px;
+    }
+    .btn-primary{
+        background-color: #8cb53f; 
+        border-color: #8cb53f;  
+        padding-top: 1em; 
+        padding-bottom: 1em; 
+        border-radius: 4px;
+    }
+}
