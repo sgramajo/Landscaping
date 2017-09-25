@@ -3,6 +3,7 @@ import { DialogComponent, DialogService } from "ng2-bootstrap-modal";
 import { MaintenanceService } from '../../services/maintenance.service'; 
 
 export interface ConfirmModel {
+  park: string; 
   date: string; 
   edger: number; 
   trimming: number; 
@@ -22,14 +23,14 @@ export interface ConfirmModel {
                             <div class="imgTitle">Mowing</div>
                             <div id="mow" (click)="addClass('mow')">
                                 <button type="button" class="close white">&times;</button>
-                                <img src="../../assets/mow.png">
+                                <img src="assets/mow.png">
                             </div>
                         </div>
                         <div class='col-6'>
                             <div class="imgTitle">Trimming</div>
                             <div id="trimming" (click)="addClass('trimming')">
                                 <button type="button" class="close white">&times;</button>
-                                <img src="../../assets/trimming.png">
+                                <img src="assets/trimming.png">
                             </div>
                         </div>                        
                      </div>
@@ -38,14 +39,14 @@ export interface ConfirmModel {
                             <div class="imgTitle">Plants</div>
                             <div id="plantsRemove" (click)="addClass('plantsRemove')">
                                 <button type="button" class="close white">&times;</button>
-                                <img src="../../assets/sprout.png">
+                                <img src="assets/sprout.png">
                             </div>
                         </div>
                         <div class='col-6'>
                             <div class="imgTitle">Edger</div>
                             <div id="edger" (click)="addClass('edger')">
                                 <button type="button" class="close white">&times;</button>
-                                <img src="../../assets/edger.png">
+                                <img src="assets/edger.png">
                             </div>
                         </div>                        
                      </div>
@@ -54,7 +55,7 @@ export interface ConfirmModel {
                             <div class="imgTitle">Weedeater</div>
                             <div id="weedeater" (click)="addClass('weedeater')">
                                 <button type="button" class="close white">&times;</button>
-                                <img src="../../assets/lawn_mower.png">
+                                <img src="assets/lawn_mower.png">
                             </div>
                         </div>
                      </div>
@@ -67,6 +68,7 @@ export interface ConfirmModel {
                 </div>`
 })
 export class ConfirmComponent extends DialogComponent<ConfirmModel, boolean> implements ConfirmModel {
+  park: string; 
   date: string;  
   edger: number; 
   trimming: number; 
@@ -136,7 +138,7 @@ export class ConfirmComponent extends DialogComponent<ConfirmModel, boolean> imp
             trimming: trimming,
             weedeater: weedeater
         }
-        this.maintenanceService.addMaintenance("arsdale", maintenance);
+        this.maintenanceService.addMaintenance(this.park, maintenance);
     }
   }
 }

@@ -71,9 +71,6 @@ export class MaintenancePage {
     var temp = this.valueKey.filter(x => x.date == String(date))[0];
     return temp; 
   }
-  addMaintenance(){ }
-  editMaintenance(){}
-  deleteMaintenance(){}
   showConfirm() {
     var temp = this.searchArray(); 
     if(temp == null || temp == undefined){
@@ -83,7 +80,7 @@ export class MaintenancePage {
         trimming: null,  
         mow: null, 
         plantsRemove: null, 
-        weedeater: null 
+        weedeater: null
       }; 
     }
     this.dialogService.addDialog(ConfirmComponent, {
@@ -93,6 +90,7 @@ export class MaintenancePage {
       trimming: temp.trimming,
       plantsRemove: temp.plantsRemove,
       mow: temp.mow,
+      park: this.selectedValue, 
       weedeater: temp.weedeater})
       .subscribe((isConfirmed)=>{
         //Get dialog result

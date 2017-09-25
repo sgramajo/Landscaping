@@ -73,7 +73,7 @@ export class SprayingPage implements OnInit {
   addSpraying(){
     var temp = this.searchArray(); 
     if(temp == undefined || temp == null){ 
-      this.sprayService.addEvent("arsdale", this.selectedDate);
+      this.sprayService.addEvent(this.selectedValue, this.selectedDate);
     }
   }
   removeSpraying(){
